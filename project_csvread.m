@@ -124,43 +124,43 @@ end
 
 figure(3);
 subplot(3,2,1), plot(ws,abs(kv1fdc)/abs(max(kv1fdc)));
-title('DC-Filtered Spectral content of shot 170330033');
+title('Highpass-Filtered Spectral content of shot 170330033');
 % axis([-2e4 2e4 0 1]);
 xlabel('Angular Frequency (rad/sec)');
 ylabel('Amplitude');
 subplot(3,2,2), plot(ws,abs(kv2fdc)/abs(max(kv2fdc)));
-title('DC-Filtered Spectral content of shot 170411019');
+title('Highpass-Filtered Spectral content of shot 170411019');
 % axis([-2e4 2e4 0 1]);
 xlabel('Angular Frequency (rad/sec)');
 ylabel('Amplitude');
 subplot(3,2,3), plot(ws,abs(kv3fdc)/abs(max(kv3fdc)));
-title('DC-Filtered Spectral content of shot 170915057');
+title('Highpass-Filtered Spectral content of shot 170915057');
 % axis([-2e4 2e4 0 1]);
 xlabel('Angular Frequency (rad/sec)');
 ylabel('Amplitude');
 subplot(3,2,4), plot(ws,abs(kv4fdc)/abs(max(kv4fdc)));
-title('DC-Filtered Spectral content of shot 170915070');
+title('Highpass-Filtered Spectral content of shot 170915070');
 % axis([-2e4 2e4 0 1]);
 xlabel('Angular Frequency (rad/sec)');
 ylabel('Amplitude');
 subplot(3,2,5), plot(ws,abs(kv5fdc)/abs(max(kv5fdc)));
-title('DC-Filtered Spectral content of shot 190419012');
+title('Highpass-Filtered Spectral content of shot 190419012');
 % axis([-2e4 2e4 0 1]);
 xlabel('Angular Frequency (rad/sec)');
 ylabel('Amplitude');
 subplot(3,2,6), plot(ws,abs(kv6fdc)/abs(max(kv6fdc)));
-title('DC-Filtered Spectral content of shot 190703013');
+title('Highpass-Filtered Spectral content of shot 190703013');
 % axis([-2e4 2e4 0 1]);
 xlabel('Angular Frequency (rad/sec)');
 ylabel('Amplitude');
 
 %% ifft kvmfdc and plot
-kv1dc = ifftshift(ifft(kv1fdc));
-kv2dc = ifftshift(ifft(kv2fdc));
-kv3dc = ifftshift(ifft(kv3fdc));
-kv4dc = ifftshift(ifft(kv4fdc));
-kv5dc = ifftshift(ifft(kv5fdc));
-kv6dc = ifftshift(ifft(kv6fdc));
+kv1dc = abs(ifftshift(ifft(kv1fdc)));
+kv2dc = abs(ifftshift(ifft(kv2fdc)));
+kv3dc = abs(ifftshift(ifft(kv3fdc)));
+kv4dc = abs(ifftshift(ifft(kv4fdc)));
+kv5dc = abs(ifftshift(ifft(kv5fdc)));
+kv6dc = abs(ifftshift(ifft(kv6fdc)));
 
 % figure(4);
 % subplot(3,2,1), plot(tfft,kv1dc,'k');
